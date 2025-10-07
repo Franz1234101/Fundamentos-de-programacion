@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, c, x1, x2, discriminante;
+
+    printf("Ingrese los valores de a, b y c: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    discriminante = b*b - 4*a*c;
+
+    if (discriminante < 0)
+        printf("No existen soluciones reales.\n");
+    else {
+        x1 = (-b + sqrt(discriminante)) / (2*a);
+        x2 = (-b - sqrt(discriminante)) / (2*a);
+        printf("x1 = %.2f\nx2 = %.2f\n", x1, x2);
+    }
+
+    return 0;
+}
