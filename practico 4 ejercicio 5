@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int N, digito, complemento = 0, potencia = 1;
+    printf("Ingrese un numero entero: ");
+    scanf("%d", &N);
+
+    while (N != 0) {
+        digito = N % 10;
+        complemento += (9 - digito) * potencia;
+        potencia *= 10;
+        N /= 10;
+    }
+
+    printf("El complemento a 9 es: %d\n", complemento);
+    return 0;
+}
