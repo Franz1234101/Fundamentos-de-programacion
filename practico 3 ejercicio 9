@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x, suma = 0, factorial;
+    int n, i, j;
+    printf("Ingrese x: ");
+    scanf("%lf", &x);
+    printf("Ingrese n: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        factorial = 1;
+        for(j = 1; j <= i; j++) {
+            factorial *= j;
+        }
+        if(i % 2 == 0)
+            suma -= pow(x, i) / factorial;
+        else
+            suma += pow(x, i) / factorial;
+    }
+
+    printf("La suma es: %.4lf\n", suma);
+    return 0;
+}
