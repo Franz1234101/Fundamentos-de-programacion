@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int N, digito, contador = 0;
+    printf("Ingrese un numero entero: ");
+    scanf("%d", &N);
+
+    while (N != 0) {
+        digito = N % 10;
+        if (digito % 2 == 0)
+            contador++;
+        N /= 10;
+    }
+
+    printf("El numero tiene %d digitos pares.\n", contador);
+    return 0;
+}
