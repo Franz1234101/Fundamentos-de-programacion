@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int N, u, d, c, m;
+
+    printf("Ingrese un numero menor que 10000: ");
+    scanf("%d", &N);
+
+    u = N % 10;
+    d = (N / 10) % 10;
+    c = (N / 100) % 10;
+    m = (N / 1000) % 10;
+
+    printf("Millares: %d\nCentenas: %d\nDecenas: %d\nUnidades: %d\n", m, c, d, u);
+    return 0;
+}
