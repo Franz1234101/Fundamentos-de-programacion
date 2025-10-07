@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x, suma = 0;
+    int n, i;
+    printf("Ingrese x: ");
+    scanf("%lf", &x);
+    printf("Ingrese n: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        suma += pow(x, i);
+    }
+
+    printf("La suma es: %.2lf\n", suma);
+    return 0;
+}
